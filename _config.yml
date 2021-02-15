@@ -27,7 +27,8 @@ github_username:  jekyll
 # Build settings
 markdown: kramdown
 #theme: minima
-theme: yefeme
+#theme: yefeme
+remote_theme: yefim/yefeme
 plugins:
   - jekyll-feed
 
