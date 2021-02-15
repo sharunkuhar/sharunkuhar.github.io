@@ -30,7 +30,8 @@ twitter_username: jekyllrb
 github_username:  jekyll
 
 # Build settings
-remote_theme: yefim/yefeme
+# Removing theme becuase converted to regular theme
+#remote_theme: yefim/yefeme
 plugins:
   - jekyll-feed
 
