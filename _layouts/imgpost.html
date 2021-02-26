@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<header>
+  <div class="logo">
+    {% include logo.svg width=46 height=61 %}
+    </svg>
+    <div class="under under-small">
+      <h2 itemprop="name headline"><em>{{ page.title | escape }}</em></h2>
+      <p class="date"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time></p>
+      <a class="back accent" href="{{ "/" | relative }}">~ back to blog</a>
+    </div>
+  </div>
+  <hr />
+</header>
+<main>
+  <article itemprop="articleBody">
+    {%- if page.image -%}
+      <img src="{{- page.image | relative_url -}}" alt="" class="featured-image-post">
+    {%- else -%}
+      {%- assign defaultimg = "/assets/images/default.jpg" -%}
+      <img src="{{- defaultimg | relative_url -}}" alt="" class="featured-image-post">
+    {%- endif -%}
+    {{ content }}
+  </article>
+</main>
